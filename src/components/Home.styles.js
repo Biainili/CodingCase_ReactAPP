@@ -1,0 +1,187 @@
+import { createUseStyles } from "react-jss";
+
+
+export const useHomeStyles = createUseStyles({
+  app: {
+    backgroundColor: "black",
+    minHeight: "100vh",
+    display: "flex",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // fontFamily: "Arial, sans-serif",
+    // color: "white",
+  },
+  content: {
+    maxWidth: "1000px",
+    padding: "0px",
+    textAlign: "center",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh" /* Adjust the height based on your app's layout */,
+  },
+  neonBackground: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    background: "linear-gradient(45deg, rgb(5, 2, 80), black, rgb(5, 2, 80))",
+    backgroundSize: "400% 400%",
+    animation: "$neonAnimation 15s ease-in-out infinite",
+  },
+
+  "@keyframes neonAnimation": {
+    "0%": {
+      backgroundPosition: "0% 50%",
+    },
+    "50%": {
+      backgroundPosition: "100% 50%",
+    },
+    "100%": {
+      backgroundPosition: "0% 50%",
+    },
+  },
+  paragraph: {
+    color: "thick",
+    fontFamily: "URW Chancery L, cursive",
+    fontSize: "35px",
+    height: "280px",
+    fontWeight: "bold",
+    marginBottom: "10px",
+    width: "150%",
+    textAlign: "center",
+  },
+  whiteText: {
+    position: "absolute",
+    top: "3%",
+    left: "9%",
+    transform: "translate(-50%, -50%)",
+    color: "white",
+    fontFamily: "Arial, sans-serif",
+    fontSize: "50px",
+    fontWeight: "bold",
+  },
+  blueText: {
+    position: "absolute",
+    top: "3%",
+    left: "19%",
+    transform: "translate(-50%, -50%)",
+    color: "royalblue",
+    fontFamily: "Arial, sans-serif",
+    fontSize: "50px",
+    fontWeight: "bold",
+  },
+  container: {
+    position: "fixed",
+    top: "40%",
+    left: "40%",
+    transform: "translate(-60%, -40%)",
+  },
+  buttonReq: {
+    fontSize: "35px",
+    backgroundColor: "royalblue",
+    fontFamily: "Apple Chancery, cursive",
+    color: "white",
+    padding: "5px 30px",
+    borderRadius: "9px",
+    border: "none",
+    position: "fixed",
+    top: "50%",
+    cursor: "pointer",
+    transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+    boxShadow: "0 2px 6px rgba(0, 0, 0, 0.3)",
+    "&:hover": {
+      transform: "scale(1.1)",
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+    },
+    "&:active": {
+      transform: "scale(0.9)",
+    },
+    animation: "$pulse 5s infinite",
+  },
+  "@keyframes pulse": {
+    "0%": {
+      transform: "scale(1)",
+    },
+    "50%": {
+      transform: "scale(1.2)",
+    },
+    "100%": {
+      transform: "scale(1)",
+    },
+  },
+  lower: {
+    backgroundColor: "royalblue",
+    padding: "100px",
+  },
+  homeLower: {
+    position: "absolute",
+    top: "10px",
+    left: "10px",
+  },
+  form: {
+    position: "absolute",
+    top: "10px",
+    left: "500px",
+    backgroundColor: "white",
+    padding: "20px",
+    borderRadius: "5px",
+  },
+  dialogContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "50px",
+    backgroundColor: "white",
+    borderRadius: "5px",
+    animation: "$fadeIn 0.3s",
+  },
+  inputField: {
+    width: '100%',
+    height: '40px',
+    marginBottom: '10px',
+    padding: '5px',
+    borderRadius: '5px',
+    border: '2px solid royalblue',
+    outline: 'none',
+  },
+  submitButton: {
+    width: '100%',
+    height: '40px',
+    backgroundColor: 'royalblue',
+    color: 'white',
+    fontFamily: "Apple Chancery, cursive",
+    fontSize: '16px',
+    fontWeight: 'bold',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s ease-in-out',
+    '&:hover': {
+      backgroundColor: 'black',
+    },
+  },
+  closeButton: {
+    marginTop: '10px',
+    backgroundColor: 'transparent',
+    border: 'none',
+    color: 'royalblue',
+    cursor: 'pointer',
+    transition: 'color 0.3s ease-in-out',
+    '&:hover': {
+      color: 'blue',
+    },
+  },
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+      transform: 'scale(0.9)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'scale(1)',
+    },
+  },
+});
